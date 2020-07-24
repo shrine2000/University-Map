@@ -67,9 +67,6 @@ class MainActivity : AppCompatActivity()   {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        find()
-
-
         val from = findViewById<Spinner>(R.id.from) as Spinner
         val to = findViewById<Spinner>(R.id.to)  as Spinner
         val listview = findViewById<ListView>(R.id.listview) as ListView
@@ -91,9 +88,6 @@ class MainActivity : AppCompatActivity()   {
         proceed.setOnClickListener {
             setListView(from.selectedItem.toString() ,to.selectedItem.toString())
         }
-
-
-
 
     }
 
@@ -163,14 +157,6 @@ class MainActivity : AppCompatActivity()   {
         listview.adapter = adapter
     }
 
-
-    fun find(){
-
-        for(i in array)
-            for (j in array)
-                if(i!=j)
-                Log.d("mmkk"," $i  $j " )
-    }
 
     fun toast (string: String) = Toast.makeText(applicationContext,string, Toast.LENGTH_SHORT).show()
 
